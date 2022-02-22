@@ -35,12 +35,14 @@ while True:
                 list_mot_secret_mute[count] = list_mot_secret[count]
             elif value in list_mot_secret:
                 list_input_word[count] = list_input_word[count] + "*"
+  
+        if list_input_word == list_mot_secret:
+            print('Bieng joué')
+            break
         print(*list_input_word, sep=" ")
         print(*list_mot_secret_mute, sep="  ")
         tentative += 1
-        if input_word == list_mot_secret:
-            print('Bieng joué')
-            break
+   
     
     if input("Continuer (O/N)? ") == 'N':
         print("Allez à ciao bonsoir")
