@@ -35,8 +35,8 @@ while True:
                 list_mot_secret_mute[count] = list_mot_secret[count]
             elif value in list_mot_secret:
                 list_input_word[count] = list_input_word[count] + "*"
-  
-        if list_input_word == list_mot_secret:
+        
+        if list_input_word == [x + "_" for x in list_mot_secret]:
             print('Bieng joué')
             break
         print(*list_input_word, sep=" ")
