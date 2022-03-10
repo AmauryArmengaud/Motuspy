@@ -26,7 +26,14 @@ while True:
             print('Le mot ne fait pas la bonne taille')
             print(*list_mot_secret_mute, sep="  ")
             tentative += 1
-            continue        
+            continue
+
+        if input_word not in mots_jeu:
+            print("Ce mot n'existe pas")
+            print(*list_mot_secret_mute, sep="  ")
+            tentative += 1
+            continue
+        
         list_input_word = list(input_word)
 
         for count, value in enumerate(list_input_word):
